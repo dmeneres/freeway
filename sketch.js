@@ -1,7 +1,13 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(500, 400)
 }
 
 function draw() {
-  background(220);
+  background(roadImage)
+  showActor()
+  showCars()
+  containActor()
+  moveCars()
+  moveActor()
+  verifyColision()
 }
