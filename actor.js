@@ -4,6 +4,8 @@ let diameterActor = 30
 
 let colision = false
 
+let myPoints = 0
+
 function showActor() {
   image(actorImage, xActor, yActor, diameterActor, diameterActor)
 }
@@ -48,6 +50,33 @@ function verifyColision() {
     )
     if (colision) {
       yActor = 366
+      if (positivePoints()) {
+        myPoints -= 1
+      }
+      colisionSound.play()
     }
+  }
+}
+
+function includePoints() {
+  textAlign(CENTER)
+  textSize(25)
+  fill(color(255, 165, 0))
+  text(myPoints, width / 2, 27)
+}
+
+function makePoint() {
+  if (yActor < 15) {
+    myPoints += 1
+    pointSound.play()
+    yActor = 366
+  }
+}
+
+function positivePoints() {
+  if (myPoints > 0) {
+    return true
+  } else {
+    return false
   }
 }

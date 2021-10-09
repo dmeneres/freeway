@@ -1,5 +1,6 @@
 function setup() {
   createCanvas(500, 400)
+  backgroundSound.loop()
 }
 
 function draw() {
@@ -10,4 +11,6 @@ function draw() {
   moveCars()
   moveActor()
   verifyColision()
+  includePoints()
+  makePoint()
 }
