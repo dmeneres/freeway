@@ -45,7 +45,7 @@ function verifyColision() {
       widthCar,
       heightCar,
       xActor,
-      yActor,
+      yActor + 15,
       diameterActor
     )
     if (colision) {
